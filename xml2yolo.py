@@ -7,12 +7,9 @@ def readClasses(filepath):
         line = file.readline()
         cnt = 0
         classes = []
-        class_idx = []
         while line:
             class_now = line.strip()
-            cnt += 1
-            classes.append(class_now.lower())
-            class_idx.append(cnt)
+            classes.append(class_now)
             line = file.readline()
         return classes
 
