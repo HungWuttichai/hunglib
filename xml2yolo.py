@@ -5,7 +5,6 @@ import xmltodict
 def readClasses(filepath):
     with open(filepath, 'r') as file:
         line = file.readline()
-        cnt = 0
         classes = []
         while line:
             class_now = line.strip()
