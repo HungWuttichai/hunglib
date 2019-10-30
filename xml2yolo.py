@@ -52,3 +52,15 @@ def xml2yolo(path_xml, path_classes):
                                                                    ) + " " + str(format(w, '.6f')) + " " + str(format(h, '.6f')) + "\n"
         yolo_file.writelines(L)
     yolo_file.close()
+
+
+if __name__ == '__main__':
+    import os
+
+    xml_folder = "Home"  # your xml folder
+    classes_file = "Home"  # your classes file
+
+    list_xml_files = os.listdir(xml_folder)
+    for list_xml_file in list_xml_files:
+        if list_xml_file.endswith('.xml'):
+            xml2yolo(list_xml_file, classes_file)
